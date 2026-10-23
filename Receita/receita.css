@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: blue;
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+
+img{
+    width: 30%;
+}
+
+iframe{
+    width: 50%;
+}
+
+.modopreparo{
+    border: 2px solid blue;
+    margin: 2%;
+    padding: 10px;
+}
