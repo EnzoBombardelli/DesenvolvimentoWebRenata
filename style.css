@@ -1,4 +1,4 @@
-/*Geral*/
+/* Geral */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: rgb(13, 10, 16);
+    color: #f2f2f2; 
 }
 
 .container {
@@ -18,13 +18,14 @@ body {
     margin: 0 auto;
 }
 
-/*Cabeçalho*/
+/* Cabeçalho */
 header {
-    background-color: #2c3e50;
+    background-color: rgb(13, 10, 16);
     color: #ffffff;
     padding: 2rem 0;
     justify-content: center;
     text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 header h1 {
@@ -34,10 +35,10 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
-    opacity: 0.85;
+    color: #707070;
 }
 
-/*Seção de Projetos*/
+/* Projetos */
 main {
     padding: 4rem 0;
 }
@@ -45,14 +46,14 @@ main {
 .projects h2 {
     text-align: center;
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: #ffffff;
 }
 
 .projects p {
     text-align: center;
     font-size: 1.3rem;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #707070;
 }
 
 .project-grid {
@@ -61,18 +62,20 @@ main {
     gap: 2rem;
 }
 
-/* Cards dos Trabalhos */
+/* Trabalhos */
 .project-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .project-card img {
@@ -80,17 +83,18 @@ main {
     height: 200px;
     object-fit: cover;
     display: block;
+    transition: filter 0.3s ease;
 }
 
 .project-card h3 {
     padding: 1.5rem 1.5rem 0.5rem;
     font-size: 1.25rem;
-    color: #2c3e50;
+    color: #f2f2f2;
 }
 
 .project-card p {
     padding: 0 1.5rem 1.5rem;
-    color: #666;
+    color: #707070;
     font-size: 1rem;
 }
 
@@ -99,22 +103,26 @@ main {
     display: inline-block;
     margin: 0 1.5rem 1.5rem;
     padding: 0.6rem 1.2rem;
-    background-color: #3498db;
+    background-color: rgba(255, 255, 255, 0.12);
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-    transition: background 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
-/*Rodapé*/
+/* Rodapé */
 footer {
-    background-color: #2c3e50;
-    color: #ffffff;
+    background-color: rgb(13, 10, 16);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #707070;
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
@@ -122,5 +130,4 @@ footer {
 
 footer p {
     font-size: 0.9rem;
-    opacity: 0.7;
 }
