@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 2</title>
+    <link rel="stylesheet" href="tabela2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="tabela1.html">Tabela 1</a>
+            <a href="tabela2.html">Tabela 2</a>
+        </nav>
+    </header>
+    <table class="tabela">
+        <caption>Minha Rotina Semanal</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>DOMINGO</th>
+                <th>SEGUNDA</th>
+                <th>TERÇA</th>
+                <th>QUARTA</th>
+                <th>QUINTA</th>
+                <th>SEXTA</th>
+                <th>SÁBADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="periodo" rowspan="2">MANHÃ</th>
+                <td rowspan="6">Descanso</td>
+                <td colspan="5">Academia</td>
+                <td rowspan="2">Futsal</td>
+            </tr>
+            <tr>
+                <td colspan="5">Trabalho</td>
+            </tr>
+            <tr>
+                <th class="periodo" rowspan="1">TARDE</th>
+                <td colspan="3" rowspan="1">NPI / Monitoria</td>
+                <td colspan="2" rowspan="1">NPI / Estudos</td> 
+                <td rowspan="2">Lazer</td>
+            </tr>
+            <tr>
+                <th class="periodo" rowspan="1">NOITE</th>
+                <td colspan="5">Aula</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
