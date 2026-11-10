@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5 - Formulário</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .ConteinerFormulario {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .ConteinerFormulario h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .GrupoFormulario {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            background-color: rgb(175 175 175);
+            border-color: rgb(100 100 100);
+        }
+
+        .GrupoRadio, .GrupoCheckbox {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .GrupoRadio label, .GrupoCheckbox label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .BotaoEnviar {
+            width: 100%;
+            padding: 12px;
+            background-color: grey;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .BotaoEnviar:hover {
+            background-color: green;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .ConteinerFormulario {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="ConteinerFormulario">
+        <h2>Cadastro</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <div class="GrupoFormulario">
+                <label for="Nome">Nome</label>
+                <input type="text" id="Nome" name="Nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="Email">E-mail</label>
+                <input type="email" id="Email" name="Email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="Senha">Senha</label>
+                <input type="password" id="Senha" name="Senha" placeholder="Crie uma senha" required>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="DataNascimento">Data de nascimento</label>
+                <input type="date" id="DataNascimento" name="DataNascimento" required>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="Sexo">Sexo</label>
+                <select id="Sexo" name="Sexo" required>
+                    <option value="" disabled selected>Selecione um sexo</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label>Tamanho do calçado</label>
+                <div class="GrupoRadio">
+                    <label><input type="radio" name="Calcado" value="37" required> BR 37</label>
+                    <label><input type="radio" name="Calcado" value="38" required> BR 38</label>
+                    <label><input type="radio" name="Calcado" value="39" required> BR 39</label>
+                    <label><input type="radio" name="Calcado" value="40" required> BR 40</label>
+                    <label><input type="radio" name="Calcado" value="41" required> BR 41</label>
+                    <label><input type="radio" name="Calcado" value="42" required> BR 42</label>
+                    <label><input type="radio" name="Calcado" value="43" required> BR 43</label>
+                    <label><input type="radio" name="Calcado" value="44" required> BR 44</label>
+                    <label><input type="radio" name="Calcado" value="45" required> BR 45</label>
+                    <label><input type="radio" name="Calcado" value="46" required> BR 46</label>
+                </div>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label>Tamanho das roupas</label>
+                <div class="GrupoCheckbox">
+                    <label><input type="checkbox" name="Roupas" value="PP"> PP</label>
+                    <label><input type="checkbox" name="Roupas" value="P"> P</label>
+                    <label><input type="checkbox" name="Roupas" value="M"> M</label>
+                    <label><input type="checkbox" name="Roupas" value="G"> G</label>
+                    <label><input type="checkbox" name="Roupas" value="GG"> GG</label>
+                    <label><input type="checkbox" name="Roupas" value="XG"> XG</label>
+                    <label><input type="checkbox" name="Roupas" value="XGG"> XGG</label>
+                </div>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="Descricao">Descrição</label>
+                <textarea id="Descricao" name="Descricao" rows="4" placeholder="Deixe sua descrição aqui..."></textarea>
+            </div>
+
+            <div class="GrupoFormulario">
+                <label for="Foto">Upload de documento</label>
+                <input type="file" id="Foto" name="Foto" accept="image/*">
+            </div>
+
+            <button type="submit" class="BotaoEnviar">Cadastrar-se</button>
+        </form>
+    </div>
+
+</body>
+</html>
